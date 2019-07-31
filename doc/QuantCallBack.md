@@ -321,7 +321,7 @@ def OnRtnTransaction(self, pTransaction):
 | nPrice     | double   | 成交价                          |
 | nVolume    | int      | 成交量                          |
 | nTurnover  | int      | 成交金额                        |
-| nBSFlag    | int      | 买卖方向 42（买） 53（卖）      |
+| nBSFlag    | int      | 买卖方向 ：66（买）， 83（卖）  |
 
 ### 9 通知委托队列
 
