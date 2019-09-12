@@ -20,7 +20,7 @@
 ### 2 进入消息监听循环 
 
 ```PYTHON
->>>api.Run()
+>>>PT_QuantApi_Python36.Run()
 ```
 
 ### 3 退出消息监听循环 
@@ -28,7 +28,7 @@
 服务器断开连接。
 
 ```python
->>>api.BreakRun()
+>>>PT_QuantApi_Python36.BreakRun()
 ```
 
 ### 4 获取api版本号

@@ -222,15 +222,15 @@ class DataCallBack(QuantCallBack):
     def OnRspTradingDay(self,pData):
         pass
 def main():
+    PT_QuantApi_Python36.Init()
     mspi = DataCallBack()
     mapi = mspi.api
-    PT_QuantApi_Python36.Init()
 
     mapi.Login("DevTest1", "abcd1234")
 
     time.sleep(1)    #此处休眠一秒，保证在行情服务器连接成功后做请求
     mapi.ReqSubQuote(1, ["order_queue","market"], [""], ["002003.SZ"], "2018-07-24 8:30:00", "2018-07-24 24:00:00")
-    mapi.Run()
+    PT_QuantApi_Python36.Run()
 
 
 if __name__ == '__main__':

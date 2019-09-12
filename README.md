@@ -6,7 +6,7 @@
 | 项目名称 | Quant量化系统平台       | 研发单位 |  |
 | -------- | --------------------------- | -------- | ------------------------ |
 | 文档名称 | QuantBaseApi python开发手册 | 项目版本 | beta5.2.1            |
-| 文档状态 | 编辑中                      | 发布日期 | 2018.12.21           |
+| 文档状态 | 编辑中                      | 发布日期 | 2019.09.12     |
 | 文档编辑 | 杨军辉、王龙                | 文档版本 | 1.0                      |
 
 [项目主页](https://www.quantstage.com/) 
@@ -70,6 +70,7 @@ linux 版本目录结构如下
 	├─libPT_TradeDataApi.so
 	├─libPTNetwork.so
 	├─libsnappy.so.1
+	├─libuv.so.1
 	└─PT_QuantApi_Python27.so
 └─demo.py
 ```
@@ -119,14 +120,15 @@ class DataCallBack(QuantCallBack):
         pass
         
 def main():
+    PT_QuantApi_Python36.Init()
     mspi = DataCallBack()
     mapi = mspi.api
-    PT_QuantApi_Python36.Init()
+
     #print mapi.GetErrMsg(3)
     #print mapi.getVersion()
     retLog = mapi.Login("DevTest1", "abcd1234")
     print("QuantPlus Login :", retLog)#打印登录返回码
-    mapi.Run()
+    PT_QuantApi_Python36.Run()
 
 if __name__ == '__main__':
     main()
